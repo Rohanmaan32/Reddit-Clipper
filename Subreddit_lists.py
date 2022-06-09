@@ -13,11 +13,8 @@ Cute=[
 'awww',
 'babycorgis',
 'rarepuppers'
-
 ]
-
 Unexpected=["Unexpected"]
-
 People_positive=[
 "HumansBeingBros",
 "MadeMeSmile",
@@ -32,6 +29,9 @@ People_negative=[
 ]
 Misc=[
 "WoahDude",
-"Interestingasfuck"
+"Interestingasfuck",
+"Damnthatsinteresting"
+
 ]
 Funny=["funny","ContagiousLaughter"]
+Subreddits=[Cute,Unexpected,People_negative,People_positive,Misc,Funny]

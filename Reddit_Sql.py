@@ -1,14 +1,5 @@
-import Api_ID
-import praw
 import mysql.connector as ms
 
-reddit = praw.Reddit(
-    client_id=Api_ID.App_id,
-    client_secret=Api_ID.Secret,
-    password="Zuccjuicer",
-    user_agent="PRAW:Link Grabbing bot by u/MetaNotFacebook",
-    username="MetaNotFacebook",
-)
 
 #params={"subreddit":"aww"}
 #req=requests.get("https://api.pushshift.io/reddit/subreddit/search",headers=params)
@@ -42,4 +33,3 @@ def RetrieveAndSqlInsert(SubredditList):
         if fails>50:
             break
     print(f"SQL ENTRY DONE with {fails} fails")
-RetrieveAndSqlInsert(["Damnthatsinteresting"])
