@@ -22,7 +22,7 @@ if mydb.is_connected():
 else:
     print("Not connected")
 cr=mydb.cursor()
-
+#give a list of subreddits to take all videos and push to a
 def RetrieveAndSqlInsert(SubredditList):
     fails=0
     for i in SubredditList:
@@ -30,8 +30,10 @@ def RetrieveAndSqlInsert(SubredditList):
             if j.url[8].lower()=='v':
                 #print(j.url[18:31])
                 try:
-                    cr.execute(f'insert into list values("{j.url[18:31]}");')
-                except :
+                    cr.execute(f'insert into list1 values("{j.url[18:31]}","{SubredditList}");')
+                    mydb.commit()
+                except Exception as e:
+                    print(e)
                     fails+=1
                     if fails>50:
                        break 
@@ -40,3 +42,4 @@ def RetrieveAndSqlInsert(SubredditList):
         if fails>50:
             break
     print(f"SQL ENTRY DONE with {fails} fails")
+RetrieveAndSqlInsert(["Damnthatsinteresting"])

@@ -34,4 +34,4 @@ Misc=[
 "WoahDude",
 "Interestingasfuck"
 ]
-Funny=["funny"]
+Funny=["funny","ContagiousLaughter"]
