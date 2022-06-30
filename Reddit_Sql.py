@@ -8,4 +8,4 @@ def RetrieveAndDownload(SubredditList):
         for j in reddit.subreddit(i).hot(limit=10000):
             if j.url[8].lower()=='v':
                 #print(j.url[18:31])
-            
+            pass
