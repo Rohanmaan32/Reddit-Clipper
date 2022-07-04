@@ -2,3 +2,5 @@ moviepy
 ffmpeg
 praw
 requests
+ipykernel
+progressbar
